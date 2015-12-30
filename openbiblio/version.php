@@ -15,6 +15,8 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-$plugin->version  = 2013092801;
+$plugin->version  = 2015123000;
 $plugin->requires = 2012120300;
-$plugin->release  = '2.2 (Build: 2013092801)';
+$plugin->release  = '2.3 (Build: 2015123000)';
+$plugin->component = 'block_openbiblio'; // Declare the type and name of this plugin.
+$plugin->maturity = MATURITY_STABLE; // This is considered as ready for production sites.

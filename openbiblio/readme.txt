@@ -20,5 +20,10 @@ Changes
 * 20130928:
 added function has_config() {return true;} to make installation work on 2.4 and higher. Thanks to Linda Vanderbaan.
 
+* 20151230:
+added $plugin->maturity
+added $plugin->component to make compatible for Moodle 3.0
+moved code to github
+
 Koen Roggemans
 koen@roggemans.net
