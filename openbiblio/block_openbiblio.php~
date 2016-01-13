@@ -65,7 +65,7 @@ $libraryid = $USER->$obib_libraryid;
 
 //connect to the openbiblio database and retrieve data about all borrowed books
 
-    if (!($connection = @ mysqli_connect($obib_host, $obib_username, $obib_passwd)))
+    if (!($connection = @ mysql_connect($obib_host, $obib_username, $obib_passwd)))
     {$this->content->text = get_string('databaseerror','block_openbiblio');
     return $this->content;
     }
