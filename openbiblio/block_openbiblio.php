@@ -5,13 +5,17 @@
 * @author Koen Roggemans
 * @license http://www.gnu.org/copyleft/gpl.html GNU Public License
 ******************************************************************************/
+
 class block_openbiblio extends block_base {
   function init() {
     $this->title   = get_string('openbiblio', 'block_openbiblio');
     $this->content_type = BLOCK_TYPE_TEXT;
-    $this->version = 2009110800;
+    $this->version = 2014013001;
     }
-function get_content() {
+
+  function has_config() {return true;}
+
+  function get_content() {
     global $USER;
     if ($this->content !== NULL) {
       return $this->content;
@@ -22,7 +26,7 @@ function get_content() {
         $this->content->text = get_string('notloggedin', 'block_openbiblio');
         return $this->content;
     }
-function has_config() {return true;}
+
 /*******************************************************************************
 * Configuration
 ******************************************************************************/
@@ -40,6 +44,12 @@ student in the library. (= what is on the barcode of the students library card).
 We use the idnumber, but it could also be the username or a custum field. 
 **/
 $obib_libraryid = get_config('openbiblio', 'libraryid');
+
+/* If openbiblio_block is not configured, we stop and show a message **/
+   if (empty($obib_libraryid)) {
+       $this->content->text = get_string('notconfigured', 'block_openbiblio');
+       return $this->content;
+   }
 $libraryid = $USER->$obib_libraryid;
 
 /******************************************************************************
@@ -87,15 +97,16 @@ $this->content->text.= "</ol>";
 	$opensearch = "<script>";
 	$opensearch .= "function opensearch(){";
 	$opensearch .= "mywindow = window.open ('$opac_url',";
-	$opensearch .= "'mywindow','width=780,height=500');";
+	$opensearch .= "'mywindow','width=780','height=500');";
 	$opensearch .= "mywindow.moveTo(0,0);";
 	$opensearch .= "}";
     $opensearch .= "</script>";
     $opensearch .= "<a href='javascript:opensearch();'>".get_string('search','block_openbiblio')."</a><br />";
-    $this->content->footer = $opensearch;
+    $this->content->footer= $opensearch;
 
     return $this->content;
   }
 }   // Here's the closing curly bracket for the class definition
     // and here's the closing PHP tag from the section above.
 ?>
+
