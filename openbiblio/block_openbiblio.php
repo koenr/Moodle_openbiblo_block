@@ -10,7 +10,7 @@ class block_openbiblio extends block_base {
   function init() {
     $this->title   = get_string('openbiblio', 'block_openbiblio');
     $this->content_type = BLOCK_TYPE_TEXT;
-    $this->version = 2014013001;
+    $this->version = 2015011301;
     }
 
   function has_config() {return true;}

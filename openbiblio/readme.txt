@@ -25,5 +25,9 @@ added $plugin->maturity
 added $plugin->component to make compatible for Moodle 3.0
 moved code to github
 
+* 2015011301:
+mysql_connect to mysqli_connect
+missing folder from move
+
 Koen Roggemans
 koen@roggemans.net
