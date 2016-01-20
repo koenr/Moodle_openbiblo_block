@@ -1,5 +1,4 @@
 <?php
-
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -14,9 +13,15 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+/******************************************************************************
+ * First read the readme file for installation and known problems
+ *
+ * @author Koen Roggemans
+ * @license http://www.gnu.org/copyleft/gpl.html GNU Public License
+ ******************************************************************************/
 
-$plugin->version  = 2016011301;
+$plugin->version  = 2016012001;
 $plugin->requires = 2012120300;
-$plugin->release  = '2.3 (Build: 2016011301)';
+$plugin->release  = '2.4 (Build: 2016012001)';
 $plugin->component = 'block_openbiblio'; // Declare the type and name of this plugin.
 $plugin->maturity = MATURITY_STABLE; // This is considered as ready for production sites.

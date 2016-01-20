@@ -26,8 +26,12 @@ added $plugin->component to make compatible for Moodle 3.0
 moved code to github
 
 * 2016011301:
-mysql_connect to mysqli_connect
 missing folder from move
+
+* 2016012001
+mysql_connect to mysqli
+code cleanup
+overdue books have now date in bold
 
 Koen Roggemans
 koen@roggemans.net
