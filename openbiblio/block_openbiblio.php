@@ -102,7 +102,9 @@ SQL;
 
         // Check whether this logged-in user has books borrowed and show the information about those books.
         $today = date("Y-m-d");
-        $this->content->text .= "<ol>";
+     	if (isset($this->content->text)) {
+            $this->content->text .= "<ol>";
+        }
         while ($row = mysqli_fetch_array($allborrowedbooks)) {
             if (($row['memberbarcode']) == $libraryid) {
                 $numberbooksborrowed++;
@@ -119,12 +121,15 @@ SQL;
         mysqli_free_result($allborrowedbooks);
         mysqli_close($connection);
 
-        $this->content->text .= "</ol>";
+        if (isset($this->content->text)) {
+            $this->content->text .= "</ol>";
+        }
         // If this user didn't borrow any books, it's nice to know too.
         if ($numberbooksborrowed == 0) {
             $this->content->text = get_string('nobooksborrowed', 'block_openbiblio');
         }
         // Show a link to the OPAC in the footer.
+	$opensearch = "";
         $opensearch .= "<script>";
         $opensearch .= "function opensearch(){";
         $opensearch .= "mywindow = window.open ('$opacurl',";
