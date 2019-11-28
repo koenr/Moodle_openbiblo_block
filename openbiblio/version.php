@@ -22,6 +22,6 @@
 
 $plugin->version  = 2019112801;
 $plugin->requires = 2012120300;
-$plugin->release  = '2.4 (Build: 2016012002)';
+$plugin->release  = '2.4 (Build: 2019112801)';
 $plugin->component = 'block_openbiblio'; // Declare the type and name of this plugin.
 $plugin->maturity = MATURITY_STABLE; // This is considered as ready for production sites.
