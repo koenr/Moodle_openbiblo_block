@@ -20,7 +20,7 @@
  * @license http://www.gnu.org/copyleft/gpl.html GNU Public License
  ******************************************************************************/
 
-$plugin->version  = 2016012002;
+$plugin->version  = 2019011281;
 $plugin->requires = 2012120300;
 $plugin->release  = '2.4 (Build: 2016012002)';
 $plugin->component = 'block_openbiblio'; // Declare the type and name of this plugin.
