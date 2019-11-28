@@ -33,5 +33,9 @@ mysql_connect to mysqli
 code cleanup
 overdue books have now date in bold
 
+* 2019011281
+Fixing a few notices
+Check for compatibility with Moodle 3.8 success
+
 Koen Roggemans
 koen@roggemans.net
